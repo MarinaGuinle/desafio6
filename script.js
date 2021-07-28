@@ -19,11 +19,18 @@ class Producto {
 
 //  instanciar
 
-let producto1 = new Producto("alimento gato","$100", true, true);
-let producto2 = new Producto ("alimento perro","$200",true, true)
+let producto1 = new Producto("alimento gato sabor pollo",100, true, false);
+let producto2 = new Producto ("alimento perro sabor carne",150,true, true);
+let producto3 = new Producto ("alimento gato sobor pescado ",250,true, true);
+let producto4 = new Producto ("alimento perro sabor pollo",260,true, true);
 
-producto1.describirProducto()
-producto2.describirProducto()
+const productos =[producto1,producto2,producto3,producto4];
+const conDescuento =  productos.filter(productos => productos.precio > 150);
+console.log("los productos con descuento son "+ conDescuento);
+
+
+// producto1.describirProducto()
+// producto2.describirProducto()
 
  function buscaElDescuento () {
     let producto = prompt("Que quiere comprar?")
